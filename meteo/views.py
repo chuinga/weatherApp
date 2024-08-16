@@ -1,8 +1,11 @@
 from datetime import datetime
+from lib2to3.fixes.fix_input import context
+from tempfile import template
 
 import geocoder as geocoder
 import requests
 from django.http import HttpResponse
+from django.template import loader
 
 
 def temp_here(request):
@@ -13,4 +16,6 @@ def temp_here(request):
     hour = now.hour
     meteo_data = requests.get(api_request).json()
     temp = meteo_data['hourly']['temperature_2m'][hour]
-    return HttpResponse(f"Neste momento na sua localização estão {temp}ºC")
+    template = loader.get_template('index.html')
+    context = {'temp': temp}
+    return HttpResponse(template.render(context, request))
