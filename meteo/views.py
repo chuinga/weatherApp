@@ -4,6 +4,7 @@ import geocoder
 import requests
 from django.http import HttpResponse
 from django.template import loader
+
 from meteo.models import Worldcities
 
 
@@ -33,7 +34,7 @@ def temp_here(request):
 
 
 def get_temp(location):
-    endpoint = 'https://api.open-meteo.com/v1/forecast'
+    endpoint = "https://api.open-meteo.com/v1/forecast"
     api_request = f"{endpoint}?latitude={location[0]}&longitude={location[1]}&hourly=temperature_2m"
     now = datetime.now()
     hour = now.hour
