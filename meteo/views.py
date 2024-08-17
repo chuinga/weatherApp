@@ -11,11 +11,13 @@ from meteo.models import Worldcities
 def temp_somewhere(request):
     random_item = Worldcities.objects.all().order_by('?').first()
     city = random_item.city
+    country = random_item.country
     location = [random_item.lat, random_item.lng]
     temp = get_temp(location)
     template = loader.get_template('index.html')
     context = {
         'city': city,
+        'country': country,
         'temp': temp
     }
     return HttpResponse(template.render(context, request))

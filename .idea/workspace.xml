@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbbd2bd5-846b-43c9-9c51-0b01cd2087a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
       <workItem from="1723907369183" duration="7000" />
       <workItem from="1723907400625" duration="30000" />
       <workItem from="1723908200378" duration="108000" />
-      <workItem from="1723909430812" duration="4782000" />
+      <workItem from="1723909430812" duration="5089000" />
     </task>
     <servers />
   </component>
